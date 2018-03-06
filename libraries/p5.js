@@ -10397,7 +10397,7 @@ function report(message, func, color) {
     doFriendlyWelcome =false;
   }
   if ('undefined' === getType(color)) {
-    color   = '#B40033'; // dark magenta
+    color = '#B40033'; // dark magenta
   } else if (getType(color) === 'number') { // Type to color
     color = typeColors[color];
   }

@@ -21,12 +21,12 @@ function setup() {
     drops[i] = new Drop(Math.floor(random(5)));
   }
 
-  createBricks(20);
+  createBricks(30);
   createText();
 }
 
 function draw() {
-  background(255);
+  background(0);
 
   // bricks
   for (var i = bricks.length - 1; i >= 0; i--) {
@@ -107,11 +107,13 @@ function createBricks(n) {
 }
 
 function createText() {
-  winText = createP('🎉🎉🎉 YOU WIN! 🎉🎉🎉');
+  winText = createP('🎉🎉🎉 YOU WON! 🎉🎉🎉');
   winText.style('display', 'none');
-  winText.position(width / 2 - 130, 80);
+  winText.style('color', '#FFF');
+  winText.position(width / 2 - 130, 150);
 
   instructionText = createP("Press 'S' to Start, 'A'/'D' to move Right/Left");
   instructionText.style('display', 'none');
-  instructionText.position(width / 2 - 240, 100);
+  instructionText.style('color', '#FFF');
+  instructionText.position(width / 2 - 240, 200);
 }
