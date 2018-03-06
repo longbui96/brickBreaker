@@ -5,7 +5,7 @@ function Ball(pos) {
     this.pos = createVector(width / 2, height - 500);
   }
 
-  this.r = 30;
+  this.r = 10;
   this.vel = createVector(1, random(1, 2)).mult(4);
   this.direction = createVector(1, 1);
   this.shadows = [];
@@ -15,7 +15,7 @@ function Ball(pos) {
     var shadow = this.pos.copy();
     this.shadows.push(shadow);
 
-    if (this.shadows.length > 5) {
+    if (this.shadows.length > 3) {
       this.shadows.splice(0, 1);
     }
 
@@ -31,8 +31,8 @@ function Ball(pos) {
     }
 
     stroke('#9A8DF2');
-    strokeWeight(2);
-    fill(255);
+    strokeWeight(5);
+    fill(100);
     ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
     ellipse(this.pos.x, this.pos.y, this.r / 2 * 3, this.r / 2 * 3);
     ellipse(this.pos.x, this.pos.y, this.r, this.r);

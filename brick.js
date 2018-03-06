@@ -2,15 +2,16 @@ function Brick(pos, r) {
   if (pos) {
     this.pos = pos.copy();
   } else {
-    this.pos = createVector(random(100, width - 100), random(100, height - 400));
+    this.pos = createVector(random(50, width - 50), random(50, height - 200));
   }
   if (r) {
     this.r = r * 0.5;
   } else {
-    this.r = random(20, 80);
+    this.r = random(10, 50);
   }
 
-  this.total = 6;
+  totalArray = [3, 4, 6];
+  this.total = totalArray[Math.floor(Math.random()*totalArray.length)];
   this.offset = [];
   this.index = Math.floor(random(5));
   this.colors = ['#6CD9CC', '#FB6578', '#FE5A8F', '#FC9574', '#9A8DF2'];

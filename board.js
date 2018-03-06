@@ -1,6 +1,6 @@
 function Board() {
-  this.r = 160;
-  this.h = 20;
+  this.r = 120;
+  this.h = 10;
   this.pos = createVector(width / 2 - this.r / 2, height - 40);
   this.isMovingLeft = false;
   this.isMovingRight = false;
